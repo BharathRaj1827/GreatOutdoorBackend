@@ -33,9 +33,7 @@ public class AdminController {
 	public ResponseEntity<List<GrowthReport>> viewDetailedSalesReportByProduct(@PathVariable("date1") Date entry,
 			@PathVariable("date2") Date exit, @PathVariable("category") String category) {
 
-		System.out.println(entry + " " + exit + category);
 		List<GrowthReport> revenueList = serviceobj.viewDetailedSalesReportByProduct(entry, exit, category);
-		System.out.println("Tse" + revenueList);
 		return new ResponseEntity<>(revenueList, HttpStatus.OK);
 	}
 
